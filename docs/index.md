@@ -1,7 +1,9 @@
-# GEN220: Highthroughput Biological Data Analysis - Fall 2020 (Apocalypse edition)
+# GEN220: Highthroughput Biological Data Analysis - Fall 2020
 
 See the [Syllabus](Resources/Syllabus) [PDF](Resources/Syllabus.pdf)
 for an overview of lecture topics.
+
+We will use [Piazza](https://piazza.com/ucr/fall2020/gen220/home)  for discussions and Q&A.
 
 Examples worked during class will be uploaded in [this working repository](https://github.com/biodataprog/GEN220_2020_examples).
 To check it out and keep it update.
@@ -19,26 +21,17 @@ git pull # to get the latest version of the files
 * [UNIX command reference 2](UNIX/img/FOSS_CheatSheet.jpg)
 * [Shell Scripting Tutorial](https://www.shellscript.sh/)
 * [Intro to Command-Line from HPCC](http://hpcc.ucr.edu/manuals_linux-basics_cmdline-basics.html)
-
 Major Topic Areas
 * [UNIX](UNIX) Shell scripting and using [HPCC](http://hpcc.ucr.edu)
 * [Python](Python) Programming
 * [Bioinformatics](Bioinfomatics) analysis methods
 * Editors [VIM/VI](http://hpcc.ucr.edu/manuals_linux-basics_vim.html) [Nano](https://www.howtogeek.com/howto/42980/the-beginners-guide-to-nano-the-linux-command-line-text-editor/) [Emacs](https://www.gnu.org/software/emacs/tour/) [Emacs Manual](https://www.gnu.org/software/emacs/manual/html_node/emacs/index.html)
 
-* Python
-** [Rosalind](http://rosalind.info/problems/locations/) has some great interactive tutorials on python and bioinformatics programming
-*** One set of well documented [solutions to these problems is here](https://github.com/kyclark/rosalind.info)
-** Manning Press has a lot of great books 
-*** [Tiny Python Projects](https://www.manning.com/books/tiny-python-projects)
-*** [Quick Python Book](https://www.manning.com/books/the-quick-python-book-third-edition)
-*** [Python Workout](https://www.manning.com/books/python-workout)
-
 # Homework
 
-* HW1 - [Homework 1](Assignments/HW1) [PDF](Assignments/HW1.pdf) 
-* HW2 - [Homework 2](Assignments/HW2) [PDF](Assignments/HW2.pdf)
-* HW3 - [Homework 3](Assignments/HW3) [PDF](Assignments/HW3.pdf)
+* HW1 - [Homework 1](Assignments/HW1) [PDF](Assignments/HW1.pdf)
+* HW2 - [Homework 2](Assignments/HW2) [PDF](Assignments/HW2.pdf) - Due Nov 1 (12:00 Noon)
+* HW3 - [Homework 3](Assignments/HW3) [PDF](Assignments/HW3.pdf) - Due Dec 4
 
 # Project
 
