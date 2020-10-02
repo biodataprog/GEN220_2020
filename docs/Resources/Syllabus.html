@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Syllabus</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<p>Syllabus for GEN220: High Throughput Biological Data Processing</p>
+<h1 id="course-description">Course Description</h1>
+<p>This course focuses on computational skills for processing data using programming language Python and UNIX environment. No prior programming experience is required, but some basic computer skills will be useful.</p>
+<p>With the advancement of high throughput data generation methods, a major challenge that graduate students in life sciences have to face today is to analyze large amount of biological data. The objective of this course is to provide an opportunity for graduate students with no computer science background to learn the basic skills of handling high throughput biological data. It covers the Linux/Unix environment and the importance of the com1mand line interface; the Python programming language; program design, implementation, and testing; BioPython; Strategies for analyzing genome resequencing, RNASeq, sequencing data. Students build hands-on skills by analyzing real high throughput biological data through homework assignments and team projects.</p>
+<p>Units: 3</p>
+<p>Instructor: Jason Stajich (jason.stajich@ucr.edu)</p>
+<p>Time and location: W 4:00-4:50PM, F 3:00-4:50PM, Zoom-land</p>
+<p>Office Hours:</p>
+<p><a href="https://biodataprog.github.io/GEN220_2020/">https://biodataprog.github.io/GEN220_2020/</a></p>
+<h2 id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Coursework in genetics or molecular biology or permission of instructor</li>
+</ul>
+<h2 id="resources">Resources</h2>
+<p>None of these texts are required for completion of the course but they will provide a great deal of helpful background and examples that will improve your ability to master UNIX or Programming in Python.</p>
+<ol type="1">
+<li><p><em>Bioinformatics Data Skills: Reproducible and Robust Research with Open Source Tools</em>. Vince Buffalo. 2015 O’Reilly &amp; Associates. Available from <a href="http://shop.oreilly.com/product/0636920030157.do">O’Reilly and Associates</a>, <a href="http://amazon.com/Bioinformatics-Data-Skills-Reproducible-Research/dp/1449367372">Amazon</a> Free to read on UCR network (or use VPN) - <a href="http://uclibs.org/PID/277903">Safari link</a>.</p></li>
+<li><p><em>Unix and Perl to the Rescue: A Primer</em>. Keith Bradnam and Ian Korf. <a href="http://korflab.ucdavis.edu/unix_and_Perl/">Unix and Perl Primer for Biologists</a></p></li>
+<li><p><em>Unix and Perl to the rescue!</em> Bradnam and Korf. <a href="https://www.amazon.com/gp/product/0521169828?tag=keithbradnamc-20">Amazon</a></p></li>
+<li><p><a href="http://rosalind.info/problems/locations/">Rosalind</a> - An online platform to learn bioinformatics and programming in Python.</p></li>
+<li><p>Software Carpentry - <a href="https://software-carpentry.org/">https://software-carpentry.org/</a> and Data Carpentry - <a href="http://www.datacarpentry.org/">http://www.datacarpentry.org/</a>.</p></li>
+<li><p>Berk Ekmekci, Charles E. McAnany, Cameron Mura. An Introduction to Programming for Bioscientists: A Python-Based Primer. PLoS Comp Bio. DOI: <a href="https://doi.org/10.1371/journal.pcbi.1004867">10.1371/journal.pcbi.1004867</a></p></li>
+<li><p>Ken Youens-Clark. Tiny Python Projects. <a href="https://www.manning.com/books/tiny-python-projects">https://www.manning.com/books/tiny-python-projects</a></p></li>
+</ol>
+<h2 id="grading">Grading</h2>
+<ul>
+<li>Programming Homework assignments (4 in total): 50% of grade</li>
+<li>Project: 50% of grade</li>
+</ul>
+<h2 id="homework">Homework</h2>
+<ul>
+<li><p>Homework is due before class on the date listed in the syllabus or if amended when assignment is given.</p></li>
+<li><p>There will be a programming assignment every two weeks during the first half of the course. Programming assignments must be prepared along with any necessary input files or documentation to demonstrate program usage.</p></li>
+<li><p>Code should be runnable as turned in. You will deposit your code in your github repository or if not possible, by iLearn. You can make one private personal repository to deposit and should organize a folder for each homework assignment (e.g. hw1, hw2, hw3, hw4).</p></li>
+</ul>
+<h2 id="projects">Projects</h2>
+<ul>
+<li><p>Project Topics will be discussed in October and teams will select a project idea to focus on.</p></li>
+<li><p>Project will be 2-3 individuals working together.</p></li>
+<li><p>A presentation will be made by each team - last day(s) of class.</p></li>
+<li><p>A final report with the details will be turned in by the group.</p></li>
+<li><p>The report needs to detail what each person’s contribution is to the project.</p></li>
+</ul>
+<h2 id="schedule">Schedule</h2>
+<table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 10%" />
+<col style="width: 47%" />
+<col style="width: 27%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Date</th>
+<th style="text-align: left;">Day</th>
+<th style="text-align: left;">Lecture Topic</th>
+<th style="text-align: left;">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Oct-2</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">Course Intro / UNIX I: Cmdline, GitHub</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Oct-7</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">UNIX II: Biocluster HPCC, Running programs</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Oct-9</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">UNIX III: Tools for data processing</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Oct-14</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">UNIX IV: Advanced UNIX and data processing</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Oct-16</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">Python 1 - Variables, running, cmdline, strings, math</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Oct-21</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">Python 2 - Logic, loops, lists, iterator; I/O reading/writing files</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Oct-23</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">Python 3 - Dictionaries, Arrays, functions</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Oct-28</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;"><strong>NO IN CLASS LECTURE</strong> - Structured data (CSV, XML, GFF, BED)</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Oct-30</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">Python 5 - BioPython, Pandas</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Nov-4</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">Python Review concepts</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Nov-6</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">Alignment and Bioinformatics Algorithms; LAST, cmdline &amp; automation</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Nov-11</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">Bioinformatics 1 - Aligning short reads, coverage, identifying variants</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Nov-13</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">Bioinformatics 2 - RNASeq analyses</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Nov-18</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">Bioinformatics 3 - Genome Assembly</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Nov-20</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">Bioinformatics 5 - Protein Sequence analyses (HMMER, InterPro, SignalP)</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Nov-25</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">Data Plotting and basic R graphics</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><em>Nov-27</em></td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">** Native American Heritage Day; No Class Meeting **</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dec-2</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;">Bioinformatics 6 - ChIP-Seq, ATAC-Seq, 5mC methylaion data</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Dec-4</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">Bioinformatics 7 - Phylogenentic analyses</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dec-9</td>
+<td style="text-align: left;">W</td>
+<td style="text-align: left;"><strong>NO IN CLASS LECTURE</strong> - Material will be posted - review major topics</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Dec-11</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">Class Presentations</td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+<hr />
+</body>
+</html>
