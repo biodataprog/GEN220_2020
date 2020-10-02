@@ -226,45 +226,43 @@ Now you need to copy your ssh key FROM your laptop TO the cluster.
 
 ## Web Access with Jupyter
 
-We will login and setup access to the cluster and support a notebook interface to the cluster. To do this you will end up needing to open two terminal windows. One where you will login to the cluster and run a job with sbatch. The other window you will do a login to the cluster, but that will support setting up what is called 'ssh tunnel'.
+[Jupyter notebooks](https://jupyter.org/) are ways run Python or programming languages within a web environment. There are also utilities for command line access.
 
-You should run this command from one of your own directories eg. your Home directory.
-```bash
-[your laptop] $ ssh cluster.hpcc.ucr.edu
-[hpcc] $ cd ~ # go to your home directory
-[hpcc] $ sbatch -p short /bigdata/gen220/shared/login/submit_jupyter.sh
-```
+You can access the HPCC instance at [https://jupyter.hpcc.ucr.edu/](https://jupyter.hpcc.ucr.edu).
 
-This will generate a file `jupyter-notebook-NNNNN.log` where the number is the job currently running. This number would have also been displayed when you submit the job with 'sbatch'. You can also view the status of your jobs with `squeue -u $USER`.
+This can also be easily installed and run on your own computer or laptop if you prefer the web interface for your coding. There are also several [free tools](https://jupyter.org/try). The challenges in these is to be able to save the code you write in these virtual environments for later. You can connect to
 
-Now that the job has started - read the log file jupyter-notebook-NNNNN.log
+Finally I don't advocate using the jupyter notebooks for more than a testing or learning environment. The code you will turn in for class homework will need to be simple python or shell code (eg text files) not ipython notebook binary files.
 
-It will say something like this
-```
-MacOS or linux terminal command to create your ssh tunnel:
-ssh -NL 8706:NODE:8706 USERNAME@cluster.hpcc.ucr.edu
-```
-Note the number of the ports (8706) will be different since it is randomly generated.
+Jupyter notebook after logging in:
+![Jupyter Notebook Interface](img/jupyter_1.png)
 
-ON MobaXTerm you can just run a command line ssh option at the bottom of the screen so you can copy that to run.
+Start a Terminal Session  - select the _Terminal_ option:
+![Jupyter Run Terminal](img/jupyter_2.png)
 
-**ON your mac/linux machine** you will need to open a second terminal and copy and paste that ssh command exactly as it is in the file and run that. If you have not setup ssh keys you will need to put in your password again.  You will basically issue a command like:
-```
-ssh -NL 8706:NODE:8706 USERNAME@cluster.hpcc.ucr.edu
-```
+Running in the terminal (on HPCC) so you can see files on your account there:
+![Jupyter Terminal](img/jupyter_3.png)
 
-Read the rest of the log file you will see a message
-```
-Copy/paste this URL into your browser when you connect for the first time,
- to login with a token:
-http://NODE:8706/?token=a844e90f68c82...
-```
-This is an example - NODE will be filled in with the name of a specific computer name from the cluster (same as the one in the ssh command above). You need to REPLACE the text *NODE* above with *localhost* and put that into your web browser running on your laptop.
+Start a Python Notebook Session  - select the _Python 3_ option:
+![Jupyter Run Python Notebook](img/jupyter_2.png)
 
-So you will need to open your webbrowser and open the URL: http://localhost:8706/ - when you get to the prompt put the token string from the logfile (something like a844e90f68c82...). This will now let you run web jupyter notebook and also use the web to edit your text files directly in the editor that is setup for python or bash syntax.
-## Practice steps.
+Enter some Python code and run it:
+![Jupyter Notebook Terminal](img/jupyter_4.png)
+
+
+## Rstudio
+
+For some part of the class we will use Rstudio which is a web interface to the R tool. You can access this at [https://rstudio.hpcc.ucr.edu](https://rstudio.hpcc.ucr.edu)
+
+Enter some Python code and run it:
+![Login Rstudio](img/rstudio_1.png)
+
+If you do not have access to HPCC you can still run a simliar rstudio environemnt on [rstudio.cloud](https://rstudio.cloud). To save your code and support ease of moving code to/from rstudio.cloud environments it is best if you can setup a github environment for the project.
+
+
+# Practice UNIX steps.
 
 1. Generate a new directory
 2. Navigate into the directory
 3. How many lines are in the file `/bigdata/gen220/shared/simple/rice_random_exons.bed`
-4. How many chromosomes are there listed (column 1)?
+4. How many different (unique) chromosomes are there listed (The first column has the chromosome name)?
