@@ -19,10 +19,10 @@ Setting up ssh keys for passwordless login
 ```shell
 [YOURLAPTOP] $ scp  ~/.ssh/id_rsa.pub YOURNAME@cluster.hpcc.ucr.edu:.ssh/mylaptopkey.pub
 [YOURLAPTOP] $ ssh YOURNAME@biocluster.ucr.edu
-[biocluster] $ cd .ssh
-[biocluster] $ cat mylaptopkey.pub >> authorized_keys
-[biocluster] $ chmod 644 authorized_keys
-[biocluster] $ logout
+[hpcc] $ cd .ssh
+[hpcc] $ cat mylaptopkey.pub >> authorized_keys
+[hpcc] $ chmod 644 authorized_keys
+[hpcc] $ logout
 $ ssh YOURNAME@cluster.hpcc.ucr.edu
 # should prompt you for your SSH key password
 ```
