@@ -1,4 +1,4 @@
-2019 Homework Homework 1
+# Homework 1
 
 1. Write a script called `download_count.sh` which does the following.
    * Download the data file [https://ftp.ncbi.nlm.nih.gov/pub/UniVec/UniVec_Core](https://ftp.ncbi.nlm.nih.gov/pub/UniVec/UniVec_Core) from NCBI
