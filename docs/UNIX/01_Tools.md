@@ -1,4 +1,4 @@
-#Command Line
+# Command Line interactions and tools
 
 ## reminder of some tools
 * `wc` - count the number of lines,words,characters
@@ -51,7 +51,7 @@ sleep 30
 
 To keep the job running but put it in the **background** use the command `bg` which will puts process in background.
 ```
-$ bg 
+$ bg
 [1]+ sleep 30 &
 ```
 
@@ -87,6 +87,7 @@ $ emacs &
 To copy a file use the command `cp`.
 
 ```bash
+$ touch one.txt  # create an empty file
 $ cp one.txt two.txt# copy one file to another
 $ mkdir books # make a directory
 $ cp one.txt books        # copy into a directory
@@ -110,7 +111,7 @@ Here we copy a file that is located on your laptop called LOCALFILE onto the HPC
 [your laptop] $ rsync -a --progress LOCALFILE USER@cluster.hpcc.ucr.edu:bigdata/
 ```
 
-Can also specify an explicit path (starts with `/`). 
+Can also specify an explicit path (starts with `/`).
 ```bash
 [your laptop] $ rsync -a --progress LOCALFILE USER@cluster.hpcc.ucr.edu:/bigdata/gen220/USER/
 ```
@@ -151,7 +152,51 @@ You can use the command `which` to tell you where a program is located
 which nano # will tell you where the nano program
            # is located
 ```
+# Useful utility - grep
 
+To search a file for matches the `grep` command is really useful and powerful. Here we will show a short example with more details later.
+
+# Output from programs
+
+Remember that we can redirect output with `>` which will overwrite a file and `>>` will append to end.
+If we want instead of storing it we wanted to pass the output from one program into another we use the
+`|` or pipe.
+
+For example - count how many words and letters are in this message:
+```bash
+echo "This is a long sentence" | wc
+```
+
+Let's get a few datasets together and try out some simple tools.
+
+If you haven't already checked out the github data repository for the class examples do this:
+```bash
+git clone https://github.com/biodataprog/GEN220_data.git
+```
+You can also browse this dataset [https://github.com/biodataprog/GEN220_data](https://github.com/biodataprog/GEN220_data)
+
+Now lets run some basic UNIX tools on these data.
+```
+cd GEN220_data
+ls # see what is in the folder, notice there is a 'data' folder
+cd data
+# take a look at one of the files
+more codon_table.txt # Also see it here https://github.com/biodataprog/GEN220_data/blob/main/data/codon_table.txt
+# let's see how many codons are in the codon table
+wc -l codon_table.txt
+# now let's see how many codons there are which code for Valine
+grep Valine codon_table.txt # see how many show up
+# now lets just report the count of the number in there
+grep Valine codon_table.txt | wc -l
+# note that grep is also really useful - you can tell it just to report the number of lines so
+# the following also works
+grep -c Valine codon_table.txt
+# can pass to sort program if you want as another way to show this
+grep cine codon_table.txt
+grep cine codon_table.txt | sort
+```
+
+# Running Bioinformatics Programs
 On the UCR HPCC there are many installed applications through a UNIX module system. To load a module means to make that program part of your path and in some cases will set other environment variables.
 
 For example to get access to the BLAST suite.
@@ -201,24 +246,24 @@ Currently Loaded Modulefiles:
 `curl` is useful downloading from remote sites. URLs either FTP, HTTP, or HTTPS.
 
 ```bash
- $ curl http://www.uniprot.org/uniprot/E3Q6S8.fasta
+ $ curl https://www.uniprot.org/uniprot/E3Q6S8.fasta
  >tr|E3Q6S8|E3Q6S8_COLGM RNAse P Rpr2/Rpp21/SNM1 subunit domain-containing protein
 OS=Colletotrichum graminicola (strain M1.001 / M2 / FGSC 10212) GN=GLRG_02386 PE=4 SV=1
 MAKPKSESLPNRHAYTRVSYLHQAAAYLATVQSPTSDSTTNSSQPGHAPHAVDHERCLET
 NETVARRFVSDIRAVSLKAQIRPSPSLKQMMCKYCDSLLVEGKTCSTTVENASKGGKKPW
 ADVMVTKCKTCGNVKRFPVSAPRQKRRPFREQKAVEGQDTTPAVSEMSTGAD
-$ curl -OL http://www.uniprot.org/uniprot/E3Q6S8.fasta
+$ curl -OL https://www.uniprot.org/uniprot/E3Q6S8.fasta
 
 % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                            Dload  Upload   Total   Spent    Left  Speed
 100   345  100   345    0     0    724      0 --:--:-- --:--:-- --:--:--   724
 
-$ curl -o myseqfile.fa  http://www.uniprot.org/uniprot/E3Q6S8.fasta
+$ curl -o myseqfile.fa  https://www.uniprot.org/uniprot/E3Q6S8.fasta
 ```
 
-Often use the '-L' in curl to allow URL redirects. There are also
-resuming options and ways to pass in username/password for
-authenticated sites. Also 
+Often use the `-L` in curl to allow URL redirects. There are also
+resuming options (`-C`) and ways to pass in username/password for
+authenticated sites. Also
 
 * wget - also gets web/FTP on commandline
 * ncftpget - for ftp
@@ -229,7 +274,7 @@ authenticated sites. Also
 `>` - write out the output to file (create it if empty, and overwrite if exists)
 
 ```bash
-$ curl http://www.uniprot.org/uniprot/E3Q6S8.fasta > E3Q6S8.fa
+$ curl https://www.uniprot.org/uniprot/E3Q6S8.fasta > E3Q6S8.fa
 ```
 
 `>>` - write out output to a file (create it if empty) but append to the end of the file
@@ -256,13 +301,12 @@ File compression can save disk space, reduce file transfer time when copying bet
 * `pigz` is parallelized and can use multiple processors
 
 ```bash
-$ module load pigz
 $ pigz file.txt
 
 $ du -h data/Nc20H.expr.tab        # report how big the file is
 656K    data/Nc20H.expr.tab
 $ pigz data/Nc20H.expr.tab         # to compress
-$ du -h data/Nc20H.expr.tab.gz     # report size of compressed file 
+$ du -h data/Nc20H.expr.tab.gz     # report size of compressed file
 236K    data/Nc20H.expr.tab.gz
 $ pigz -d data/Nc20H.expr.tab.gz    # to uncompress
 ```
@@ -271,6 +315,7 @@ $ pigz -d data/Nc20H.expr.tab.gz    # to uncompress
 *  pbzip2 is parallelized and can use multiple processors
 
 ```bash
+$ module load pbzip2
 $ bzip2 data/Nc20H.expr.tab        # compress with bzip2
 $ du -h data/Nc20H.expr.tab.bz2    # report size of bzipped file
 204K    data/Nc20H.expr.tab.bz2
@@ -278,6 +323,9 @@ $ bunzip2 data/Nc20H.expr.tab.bz2
 ```
 
 `zcat`, `zmore` and `bzcat`, `bzmore` to read compressed files on the fly
+
+```bash
+$ zmore
 
 ## Disk space usage of files
 
@@ -388,7 +436,7 @@ now you can type this in on the cmdline:
 ```bash
 module load ncbi-blast
 module load db-ncbi
-curl https://www.uniprot.org/uniprot/Q5T6X5.fasta > Q5T6X5.fasta
+curl -O https://www.uniprot.org/uniprot/Q5T6X5.fasta
 blastp -num_threads 2 -query Q5T6X5.fasta  -db swissprot -out result.blastp
 ```
 
@@ -400,7 +448,7 @@ You can also make this a job script (call it job.sh)
 #!/bin/bash
 module load ncbi-blast
 module load db-ncbi
-curl https://www.uniprot.org/uniprot/Q5T6X5.fasta > Q5T6X5.fasta
+curl -O https://www.uniprot.org/uniprot/Q5T6X5.fasta
 blastp -num_threads 2 -query Q5T6X5.fasta  -db swissprot -out result.blastp
 ```
 
@@ -424,6 +472,6 @@ Can also set these INSIDE the script
 #SBATCH --nodes 1 --ntasks 2 --mem 2gb --time 2:00:00
 module load ncbi-blast
 module load db-ncbi
-curl https://www.uniprot.org/uniprot/Q5T6X5.fasta > Q5T6X5.fasta
+curl -O https://www.uniprot.org/uniprot/Q5T6X5.fasta
 blastp -num_threads 2 -query Q5T6X5.fasta  -db swissprot -out result.blastp
 ```
