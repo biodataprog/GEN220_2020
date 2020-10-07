@@ -1,7 +1,7 @@
 2019 Homework Homework 1
 
 1. Write a script called `download_count.sh` which does the following.
-   * Download the data file [ftp://ftp.ncbi.nih.gov//blast/db/FASTA/vector.gz](ftp://ftp.ncbi.nih.gov//blast/db/FASTA/vector.gz) from NCBI
+   * Download the data file [https://ftp.ncbi.nlm.nih.gov/pub/UniVec/UniVec_Core](https://ftp.ncbi.nlm.nih.gov/pub/UniVec/UniVec_Core) from NCBI
    * Print out the count of the number of FASTA format sequences in this file - see [Wikipedia FASTA format](https://en.wikipedia.org/wiki/FASTA_format) - each record starts with a ">"
 
 2. Write a script called `summary_exons.sh` which summarizes the total length of exons in the file [data/rice_random_exons.bed](https://raw.githubusercontent.com/biodataprog/GEN220/master/data/rice_random_exons.bed)
