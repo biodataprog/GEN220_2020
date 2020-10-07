@@ -30,8 +30,8 @@ Major Topic Areas
 # Homework
 
 * HW1 - [Homework 1](Assignments/HW1) [PDF](Assignments/HW1.pdf)
-* HW2 - [Homework 2](Assignments/HW2) [PDF](Assignments/HW2.pdf) - Due Nov 1 (12:00 Noon)
-* HW3 - [Homework 3](Assignments/HW3) [PDF](Assignments/HW3.pdf) - Due Dec 4
+* HW2 - [Homework 2](Assignments/HW2) [PDF](Assignments/HW2.pdf)
+* HW3 - [Homework 3](Assignments/HW3) [PDF](Assignments/HW3.pdf)
 
 # Project
 
