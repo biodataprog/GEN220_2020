@@ -12,6 +12,10 @@ git clone https://github.com/biodataprog/GEN220_2020_examples.git
 cd GEN220_2020_examples
 # ... time passes, new examples are uploaded
 git pull # to get the latest version of the files
+
+# let's also checkout the example datasets for the class
+cd ..
+git clone https://github.com/biodataprog/GEN220_data.git
 ```
 # Resources
 * [SSH keys](Resources/SSH_keys)
