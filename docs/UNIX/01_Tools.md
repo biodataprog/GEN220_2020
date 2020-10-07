@@ -118,7 +118,7 @@ Can also specify an explicit path (starts with `/`).
 
 Can copy FROM HPCC to your local computer
 ```bash
-[your laptop] $ rsync -a --progress USER@cluster.hpcc.ucr.edu:/bigdata/gen220/share/simple/yeast_gene_names.txt
+[your laptop] $ rsync -a --progress USER@cluster.hpcc.ucr.edu:/bigdata/gen220/share/simple/yeast_gene_names.txt .
 ```
 
 ## Moving files
