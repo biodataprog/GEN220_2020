@@ -6,18 +6,6 @@ Write a program `sevenless.py` to print out all the numbers from 0 to
 99, one on each line, except do not print any number perfectly
 divisible by 7
 
-## Open and Shut
-
-Write a script `open_shut.py` to write a new file called 'closed.txt'
-
-A database of all movies file is located at [https://datasets.imdbws.com/title.basics.tsv.gz](https://datasets.imdbws.com/title.basics.tsv.gz) or you can use the already downloaded file at `/bigdata/gen220/shared/simple/title.basics.tsv.gz`
-
-In this file please have it print out:
-1. the number of movies which have 'door' (or) 'Door' in the name.
-2. the number of movies which have the word 'door' or 'Door' (eg it has to be a whole word not a part of another word).
-3. the number of movies with the word "Open" and the number with the word "Closed"
-
-
 ## Count up
 
 Compute let's calculate some statistics from this GFF file which lists
