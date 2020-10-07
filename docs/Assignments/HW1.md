@@ -9,5 +9,5 @@
    * use a loop structure to read each line
    * add up the values into a variable
 
-3. Write a script called 'strand_gene_count.sh' to calculate the number of genes that are on the + and - strand in the file.
+3. Write a script called `strand_gene_count.sh` to calculate the number of genes that are on the + and - strand in the file.
   * [https://fungidb.org/common/downloads/release-48/ScerevisiaeS288c/gff/data/FungiDB-48_ScerevisiaeS288c.gff](https://fungidb.org/common/downloads/release-48/ScerevisiaeS288c/gff/data/FungiDB-48_ScerevisiaeS288c.gff)
