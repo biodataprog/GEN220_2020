@@ -1,7 +1,7 @@
 # Homework 1
 
-Homework can be submitted via the github link which will create a repository for you with basic template of files you can edit to solve the homework.
-[https://classroom.github.com/a/XQDj3DK-](https://classroom.github.com/a/XQDj3DK-)
+Homework can be submitted via the github link which will create a repository for you with basic template of files you can edit to solve the homework. See the the table for homework submission links which will help you create a github repository in the class team.
+[https://piazza.com/ucr/fall2020/gen220/resources](https://piazza.com/ucr/fall2020/gen220/resources)
 
 1. Write a script called `download_count.sh` which does the following.
    * Download the data file [https://ftp.ncbi.nlm.nih.gov/pub/UniVec/UniVec_Core](https://ftp.ncbi.nlm.nih.gov/pub/UniVec/UniVec_Core) from NCBI
