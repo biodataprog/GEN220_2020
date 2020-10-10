@@ -355,6 +355,9 @@ ChrSy    136034    136323
 
 **cut** Cut - subselect and print certain columns from a file
 
+Here we will process output from NCBI blast - this is default output for the tab delimited format.
+It has [12 columns](https://sites.google.com/site/wiki4metagenomics/tools/blast/blastn-output-format-6).
+
 ```
 YAR060C Chr_I 100.00 336 0   0    336    1   217148    217483    8.6e-83    298.8
 YAR060C Chr_I 64.00  325 95 22    330   14   198385    198695    4.1e-18    84.0
@@ -368,7 +371,7 @@ YAR061W Chr_I 67.88  193 62  0    194    2    27770    27962    3.9e-20    90.0
 YAL030W Chr_I 100.00 252 0   0    103  354    87502    87753    2.5e-55    207.7
 ```
 
-Just print out the first column of sequence names.
+Just print out the first column of sequence names. The `-f1` option specifies only to print Column 1
 
 ```bash
 cut -f1 data/yeast_orfs-to-chr1.FASTA.tab | head -n 7
@@ -388,7 +391,8 @@ Chr_I
 Chr_I
 Chr_I
 ```
-Get the Query name and Percent Identity
+
+Get the Query name and Percent Identity which are contained in Column 3
 
 ```bash
 cut -f1,3 data/yeast_orfs-to-chr1.FASTA.tab | head -n 5
@@ -405,25 +409,28 @@ YAL030W    100.00
 YAL030W    98.15
 ```
 
-Cut two columns out, and run sort to sort on the column
+Sort data on the percent identity column (number 3 -specify this is a numeric sort). The `-k3,3` means sort the first (and only in this example) sort key starts at column 3 and ends at column 3. If you wanted the key to span multiple fields you can specify it with '-kSTART,END'. For more complicated sorting scheme see some answers [1](https://stackoverflow.com/questions/357560/sorting-multiple-keys-with-unix-sort) [2](https://unix.stackexchange.com/questions/318506/using-gnu-sort-with-multiple-keys-text-and-numbers/318510).
+
+After sorting, cut two columns out (columns 1 and 3), and only print out top 5 for our example with `head -n 5`.
 
 ```bash
-sort -k3,1nr data/yeast_orfs-to-chr1.FASTA.tab | cut -f1,3 |  head -n 5
+sort -k3,3nr data/yeast_orfs-to-chr1.FASTA.tab | cut -f1,3 |  head -n 5
 HRA1    100.00
 YAL001C    100.00
 YAL002W    100.00
 YAL003W    100.00
 YAL003W    100.00
 
-$ sort -k9,1n data/yeast_orfs-to-chr1.FASTA.tab |  head -n 5
-YAL069W    100.00    335    649
-YAL068W-A    100.00    538    792
-YAL068C    100.00    1807    2169
-YAR020C    79.76    2008    2169
-YAL067W-A    100.00    2480    2707
+# 9th column is Bitscore (a measure of similarity in the alignment)
+$ sort -k9,9n data/yeast_orfs-to-chr1.FASTA.tab  | cut -f1-3,9 | head -n 5
+YAL069W	Chr_I	100.00	335
+YAL068W-A	Chr_I	100.00	538
+YAL068C	Chr_I	100.00	1807
+YAR020C	Chr_I	79.76	2008
+YAL067W-A	Chr_I	100.00	2480
 ```
 
-Made up example, but you can cut two columns out. And also PASTE things back together.
+Made up example, but you can cut two columns out. And also use [Paste](https://en.wikipedia.org/wiki/Paste_(Unix)) to combine things back together.
 
 ```bash
 cut -f1,3,4 data/yeast_orfs-to-chr1.FASTA.tab > first_cols.tab
@@ -454,10 +461,20 @@ Chr11 14656670
 Chr3 14560358
 ```
 
-Here get the length of an aligmment (column 6 is the START and column 7 is the end)
+Here get the length of an aligmment (column 6 is the START and column 7 is the end) using awk.
 
 ```bash
-awk '{print $7-$6}' data/yeast_orfs-to-chr1.FASTA.tab
+awk '{print $7-$6}' data/yeast_orfs-to-chr1.FASTA.tab | sort -n | head -n 4
+-42
+-42
+-26
+-26
+awk '{print $7-$6}' data/yeast_orfs-to-chr1.FASTA.tab | sort -nr | head -n 5
+4614
+4607
+4416
+4308
+4286
 ```
 
 ## Advanced Variable usage
