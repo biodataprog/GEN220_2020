@@ -80,7 +80,7 @@ Version control is useful for sharing code, keeping track of versions
 of software and code (or any text). Distributed version control allows multiple people to work on the same project or code.
 
 Github is a free* resource for code sharing and supports a great deal
-of the software development among open source projects. 
+of the software development among open source projects.
 
 ## Creating Github Account
 
@@ -111,7 +111,7 @@ Note that creating these same pairs on your local laptop and copying the public 
 
 Click on piazza links for homework submission:
 
-[https://piazza.com/ucr/fall2019/gen220/resources](https://piazza.com/ucr/fall2019/gen220/resources)
+[https://piazza.com/ucr/fall2020/gen220/resources](https://piazza.com/ucr/fall2020/gen220/resources)
 
 ![piazzahw](img/piazza_hw.png)
 
@@ -144,14 +144,14 @@ See the link in this window:
 
 Go to your command line (on the cluster and check out your repository.
 
-`git clone git@github.com:biodataprog/2019-hw1-hyphaltip.git`
+`git clone git@github.com:biodataprog/2020-hw1-hyphaltip.git`
 
 If you cannot get this to work you can revert to using https but you
 will need to enter your **Github** username and password each time you
 want to commit which is annoying.
 
 The equivalent would look like this
-`git clone https://github.com/biodataprog/2019-hw1-hyphaltip.git`
+`git clone https://github.com/biodataprog/2020-hw1-hyphaltip.git`
 
 ## Making changes
 
@@ -202,5 +202,3 @@ this by typing
 More links and helpful tutorial here
 
 [https://guides.github.com/activities/hello-world/](https://guides.github.com/activities/hello-world/) from github.
-
-
