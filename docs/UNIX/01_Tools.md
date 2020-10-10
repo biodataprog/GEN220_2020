@@ -324,8 +324,10 @@ $ bunzip2 data/Nc20H.expr.tab.bz2
 
 `zcat`, `zmore` and `bzcat`, `bzmore` to read compressed files on the fly
 
+
 ```bash
-$ zmore
+$ zmore file.gz
+```
 
 ## Disk space usage of files
 
@@ -396,7 +398,7 @@ How much data am I using currently: https://dashboard.hpcc.ucr.edu
 ## Transferring data
 
 Graphical tools:
-Filezilla - https://filezilla-project.org/download.php
+Filezilla - [https://filezilla-project.org/download.php](https://filezilla-project.org/download.php)
 
 Command-line:
 ```bash
@@ -423,7 +425,7 @@ a job management or queueing system.
 We use SLURM on the UCR system currently.
 
 We use the SLURM queuing systems on HPCC. Read info here for more resources.
-http://hpcc.ucr.edu/manuals_linux-cluster_jobs.html
+[http://hpcc.ucr.edu/manuals_linux-cluster_jobs.html](http://hpcc.ucr.edu/manuals_linux-cluster_jobs.html)
 
 Getting an interactive shell (eg get your own CPU to do work on)
 
@@ -432,7 +434,7 @@ $ srun --pty bash -l
 $ srun --nodes 1 --ntasks 2 --mem 8gb --time 8:00:00 --pty bash -l
 ```
 
-now you can type this in on the cmdline:
+You can type this in on the cmdline (also click [here](https://www.uniprot.org/uniprot/Q5T6X5.fasta) to see what you will be retrieving )
 ```bash
 module load ncbi-blast
 module load db-ncbi

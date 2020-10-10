@@ -91,11 +91,10 @@ fi
 
 ## Really useful testing options
 
-`-f` - if the variable is a file and exists
-`-s` - if file exists and is not zero
-`-d` - if the variable is a directory
-
-`-z` - if variable is empty
+* `-f` - if the variable is a file and exists
+* `-s` - if file exists and is not zero
+* `-d` - if the variable is a directory
+* `-z` - if variable is empty
 
 ```bash
 if [ ! -f $file1 ]; then
@@ -109,6 +108,7 @@ fi
 if [ -s $file2 ]; then
  echo "file $file2 exists and is not empty"
 fi
+```
 
 ## Loops
 
@@ -233,9 +233,9 @@ done
 
 # Data Processing
 
-https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch07.html#chapter-07
+[https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch07.html#chapter-07](https://www.safaribooksonline.com/library/view/bioinformatics-data-skills/9781449367480/ch07.html#chapter-07)
 
-https://github.com/biodataprog/GEN220/tree/master/data
+[https://github.com/biodataprog/GEN220_data/tree/main/data](https://github.com/biodataprog/GEN220_data/tree/master/data)
 
 **sort** Sort data and files.
 
