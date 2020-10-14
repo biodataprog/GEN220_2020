@@ -1,5 +1,41 @@
 # Odds and Ends
 
+# UNIX wildcard characters
+
+```bash
+cd GEN220_data/data
+ls
+Ecoli_K-12.fasta.gz                  Ncrassa_OR74A_InterproDomains.tab.gz rice_chr6_3kSNPs_filt.bed.gz
+Nc20H.expr.tab.gz                    codon_table.txt                      rice_random_exons.bed
+Nc3H.expr.tab.gz                     numbers.txt                          yeast_orfs-to-chr1.FASTA.tab.gz
+```
+If I wanted to see all the files which end in `.txt`
+```bash
+ls *.txt
+codon_table.txt numbers.txt
+
+ls -l *.txt
+-rw-r--r--@ 1 jstajich  staff  938 Oct  7 14:43 codon_table.txt
+-rw-r--r--@ 1 jstajich  staff  291 Oct  7 14:43 numbers.txt
+
+ls r*
+rice_chr6_3kSNPs_filt.bed.gz rice_random_exons.bed
+
+ls r*.gz
+rice_chr6_3kSNPs_filt.bed.gz
+
+# count lines in muliple files
+wc -l *.txt
+        64 codon_table.txt
+       100 numbers.txt
+       164 total
+
+# count all lines in muliple compressed files
+zcat *.gz | wc -l
+348854
+```
+
+
 # GZIP
 
 Compression of files with gzip
