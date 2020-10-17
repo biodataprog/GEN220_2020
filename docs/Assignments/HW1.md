@@ -1,6 +1,6 @@
 # Homework 1
 
-Homework can be submitted via the github link which will create a repository for you with basic template of files you can edit to solve the homework. See the the table for homework submission links which will help you create a github repository in the class team.
+Homework can be submitted via the github link which will create a repository for you with basic template of files you can edit to solve the homework. See the the table for homework submission links which will help you create a github repository in the class team.cd 
 [https://piazza.com/ucr/fall2020/gen220/resources](https://piazza.com/ucr/fall2020/gen220/resources)
 
 1. Write a script called `download_count.sh` which does the following.
@@ -14,6 +14,6 @@ Homework can be submitted via the github link which will create a repository for
    * Print out the total length of exon features at the end.
    * You do not need to save this for each chromosome, just print out the total length for this example - however if this is too easy for you, go ahead and make a more sophisticated report which presents, per chromosome, the total length of exons as well as the total number of exons, and the average length of exons.
 
-3. Write a script called `strand_gene_count.sh` to calculate the number of genes that are on the positive (+) and negative (-) strand in the file.
+3. Write a script called `strand_gene_count.sh` to calculate the number of genes that are on the positive (+) and negative (-) strand in the file. This file format is called [GFF](https://en.wikipedia.org/wiki/General_feature_format) - the strand of the gene is encoded in 7th column. 
 
   * [https://fungidb.org/common/downloads/release-48/ScerevisiaeS288c/gff/data/FungiDB-48_ScerevisiaeS288c.gff](https://fungidb.org/common/downloads/release-48/ScerevisiaeS288c/gff/data/FungiDB-48_ScerevisiaeS288c.gff)
