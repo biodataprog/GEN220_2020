@@ -341,6 +341,14 @@ for line in info:
 
 ## CSV files
 
+Comma delimited files can be parsed this way. The [module](https://docs.python.org/3/library/csv.html) is smart enough to handle cases where the delimiter is embedded within
+quotes.
+So for example
+
+```
+Colorado State University,"Fort Collins, Colorado",CSU
+```
+
 ```python
 import csv
 file2 = "test2.csv"
