@@ -15,7 +15,7 @@ This indentation can be with spaces or tabs, but not a mix of each.
 if TRUE:
     THEN DO X
 elif OTHER_THING_TRUE:
-    THEN DO Y 
+    THEN DO Y
 else:
     THEN DO Z
 ```
@@ -23,7 +23,7 @@ else:
 
 ## Loops
 
-Loops let you 
+Loops let you
 ```python
 while ( TRUE ):
     Do X
@@ -125,7 +125,7 @@ b=12
 c=13
 if a < b and b < c:
     print("a is smaller than c")
-    
+
 if not a == b:
     print("a is not equal to b")
 else:
@@ -202,7 +202,7 @@ for i in range(len(list)):
 list=(1,7,8)
 for item in list:
     print("item is ",item)
-# prints out 
+# prints out
 # item[0] = 1
 # item[1] = 7
 # item[2] = 8
@@ -226,7 +226,7 @@ list = ('a', 'b', 'c', 'C','d')
 for l in list:
     if l == "b":
         continue
-    
+
     if l == "C":
        break
     print(l)
@@ -332,7 +332,7 @@ print ("There are",counter, "lines")
 Can be a network connection (eg URL for web or FTP)
 ```python
 import urllib.request
-orginfo = "https://biodataprog.github.io/programming-intro/data/random_exons.csv"
+orginfo = "https://raw.githubusercontent.com/biodataprog/GEN220_data/main/data/random_exons.csv"
 info = urllib.request.urlopen(orginfo)
 for line in info:
     linestrip = line.decode('UTF-8').strip()
