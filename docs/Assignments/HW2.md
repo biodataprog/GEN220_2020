@@ -20,7 +20,7 @@ Here is a GFF file for the E. coli K-12 genome. [ftp://ftp.ensemblgenomes.org/pu
 Here is a FASTA file for the genome of E. coli K-12. [ftp://ftp.ensemblgenomes.org/pub/bacteria/release-45/fasta/bacteria_0_collection/escherichia_coli_str_k_12_substr_mg1655/dna/Escherichia_coli_str_k_12_substr_mg1655.ASM584v2.dna.chromosome.Chromosome.fa.gz](ftp://ftp.ensemblgenomes.org/pub/bacteria/release-45/fasta/bacteria_0_collection/escherichia_coli_str_k_12_substr_mg1655/dna/Escherichia_coli_str_k_12_substr_mg1655.ASM584v2.dna.chromosome.Chromosome.fa.gz)
 
 Write a script called `count_up.py` to:
-1. Download this file (this can be in UNIX before you run your python script or you can incorporate this into the python).  I already wrote part of this for you in the template code you can start with that executes a `curl` command from within your script.
+1. Download this file (this can be in UNIX before you run your python script or you can incorporate this into the python).  I already wrote part of this for you in the template code you can start with that executes a `curl` command from within your script. But if this doesn't make sense to you, you can remove that.
 2. Count up and print out the number genes (gene feature)
 3. Compute the total length of the genes (length is the END - START)
 4. Use the FASTA file to compute the total length of genome (by adding up the length of each sequence in the file). Recall I lectured on a basic code to read in a FASTA file - you can also see that code template [here](https://github.com/biodataprog/code_templates/blob/master/Lists_Dictionaries/fasta_parser.py)
