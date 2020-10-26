@@ -64,6 +64,7 @@ Major Topic Areas
 1. [Bioinformatics: Data Ranges](Bioinformatics/Ranges_Features_overlap) [PDF](Bioinformatics/Ranges_Features_overlap.pdf)
 1. [Bioinformatics: Workshop - parsing data](Bioinformatics/Workshop_parsing) [PDF](Bioinformatics/Workshop_parsing.pdf)
 1. [Bioinformatics 7: Protein domains](Bioinformatics/Protein_domains) [PDF](Bioinformatics/Protein_domains.pdf)
+
 ## Other skills and Tools
 1. [R basics](Misc/Rplotting) - we will use Rstudio for this [http://rstudio.hpcc.ucr.edu](http://rstudio.hpcc.ucr.edu/) on-line or you can use it locally on your laptop if you have installed.
    - Also see [https://datacarpentry.org/R-genomics/05-data-visualization.html](https://datacarpentry.org/R-genomics/05-data-visualization.html)
