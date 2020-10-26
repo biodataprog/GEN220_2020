@@ -36,31 +36,35 @@ Major Topic Areas
 * HW1 - [Homework 1](Assignments/HW1) [PDF](Assignments/HW1.pdf)
 * HW2 - [Homework 2](Assignments/HW2) [PDF](Assignments/HW2.pdf)
 * HW3 - [Homework 3](Assignments/HW3) [PDF](Assignments/HW3.pdf)
-
+* HW4 - [Homework 4](Assignments/HW4) [PDF](Assignemnts/HW4.pdf)
 # Project
 
 * Project Team Ideas [Project](Assignments/Project_Teams)
 
 # Lectures
 
-* 0 & 1 [Course Intro / UNIX I: Cmdline](UNIX/00_Login_Notebook) [PDF](UNIX/00_Login_Notebook.pdf)
-* 2 [UNIX 2: Running Tools](UNIX/01_Tools) [PDF](UNIX/01_Tools.pdf)
-* 3 [UNIX 3: Analysis and Programming](UNIX/02_Analysis_summary) [PDF](UNIX/02_Analysis_summary.pdf)
-* 4 [UNIX 4: Misc Tricks](UNIX/03_Wrapup_and_Tools) [PDF](UNIX/03_Wrapup_and_Tools.pdf)
+## UNIX
+1. [Course Intro / UNIX I: Cmdline](UNIX/00_Login_Notebook) [PDF](UNIX/00_Login_Notebook.pdf)
+1. [UNIX: Running Tools](UNIX/01_Tools) [PDF](UNIX/01_Tools.pdf)
+1. [UNIX: Analysis and Programming](UNIX/02_Analysis_summary) [PDF](UNIX/02_Analysis_summary.pdf)
+1. [UNIX: Misc Tricks](UNIX/03_Wrapup_and_Tools) [PDF](UNIX/03_Wrapup_and_Tools.pdf)
+## Python
+1. [Python: Intro](Python/01_Python_Intro) [PDF](Python/01_Python_Intro.pdf)
+1. [Python: Logic,Loops,IO](Python/02_Loops_IO) [PDF](Python/02_Loops_IO.pdf)
+1. [Python: Dictionaries and Functions](Python/03_Dict_Func.md) [PDF](Python/03_Dict_Func.pdf)
+1. [Python: Workshop](Python/04_Workshop) [PDF](Python/04_Workshop.pdf)
+1. [Python: Regular Expressions](Python/05_String_patterns) [PDF](Python/05_String_patterns.pdf)
+1. [Python: Packages/BioPython](Python/06_Packages) [PDF](Python/06_Packages.pdf)
 
-* 5 [Python 1: Intro](Python/01_Python_Intro) [PDF](Python/01_Python_Intro.pdf)
-* 6 [Python 2: Logic,Loops,IO](Python/02_Loops_IO) [PDF](Python/02_Loops_IO.pdf)
-* 7 [Python 3: Dictionaries and Functions](Python/03_Dict_Func.md) [PDF](Python/03_Dict_Func.pdf)
-* 7 [Python 4: Workshop](Python/04_Workshop) [PDF](Python/04_Workshop.pdf)
-* 8 [Python 5: Regular Expressions](Python/05_String_patterns) [PDF](Python/05_String_patterns.pdf)
-* 9 [Python 6: Packages/BioPython](Python/06_Packages) [PDF](Python/06_Packages.pdf)
-
-* 10 [Bioinformatics 1: Basics and BLAST](Bioinformatics/01_Basic_Bioinformatics) [PDF](Bioinformatics/01_Basic_Bioinformatics.pdf)
-* 11 [Bioinformatics 2: Orthologs](Bioinformatics/02_orthology) [PDF](Bioinformatics/02_orthology.pdf)
-* 12 [Bioinformatics 3: Ranges](Bioinformatics/03_Range_overlap) [PDF](Bioinformatics/03_Range_overlap.pdf)
-* 13 [Bioinformatics 4: Workshop - parsing](Bioinformatics/04_Workshop_parse) [PDF](Bioinformatics/04_Workshop_parse.pdf)
-* 14 [Bioinformatics 5: RNASeq](Bioinformatics/05_RNASeq) [PDF](Bioinformatics/05_RNASeq.pdf)
-* 15 [Bioinformatics 6: Protein domains](Bioinformatics/06_Protein_domains) [PDF](Bioinformatics/06_Protein_domains.pdf)
-* 16 [Bioinformatics 7: R basics](https://biodataprog.github.io/2018_programming-intro/Lectures/14_Utilities_Rplotting.html) - we will use Rstudio for this [http://rstudio.hpcc.ucr.edu](http://rstudio.hpcc.ucr.edu/) on-line or you can use it locally on your laptop if you have installed.
-* - Also see [https://datacarpentry.org/R-genomics/05-data-visualization.html](https://datacarpentry.org/R-genomics/05-data-visualization.html)
-* 17 [Bioinformatics 8: Short Reads](Bioinformatics/08_short_read) [PDF](Bioinformatics/08_short_read.pdf)
+## Bioinformatics and Genomics
+1. [Bioinformatics: Basics and BLAST](Bioinformatics/Basic_Bioinformatics) [PDF](Bioinformatics/Basic_Bioinformatics.pdf)
+1. [Bioinformatics: Short Reads](Bioinformatics/Short_read_aligning) [PDF](Bioinformatics/Short_read_aligning.pdf)
+1. [Bioinformatics: RNASeq](Bioinformatics/RNASeq) [PDF](Bioinformatics/RNASeq.pdf)
+1. [Bioinformatics: Variation and SNPs](Bioinformatics/Variants) [PDF](Bioinformatics/Variants.pdf)
+1. [Bioinformatics: Data Ranges](Bioinformatics/Ranges_Features_overlap) [PDF](Bioinformatics/Ranges_Features_overlap.pdf)
+1. [Bioinformatics: Workshop - parsing data](Bioinformatics/Workshop_parsing) [PDF](Bioinformatics/Workshop_parsing.pdf)
+1. [Bioinformatics 7: Protein domains](Bioinformatics/Protein_domains) [PDF](Bioinformatics/Protein_domains.pdf)
+## Other skills and Tools
+1. [R basics](Misc/Rplotting) - we will use Rstudio for this [http://rstudio.hpcc.ucr.edu](http://rstudio.hpcc.ucr.edu/) on-line or you can use it locally on your laptop if you have installed.
+   - Also see [https://datacarpentry.org/R-genomics/05-data-visualization.html](https://datacarpentry.org/R-genomics/05-data-visualization.html)
+1. [Building Websites](Misc/Building_Websites) using github.io [PDF](Misc/Building_Websites.pdf)
