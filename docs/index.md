@@ -43,6 +43,8 @@ Major Topic Areas
 
 # Lectures
 
+The course will be divided into three topic areas.
+
 ## UNIX
 1. [Course Intro / UNIX I: Cmdline](UNIX/00_Login_Notebook) [PDF](UNIX/00_Login_Notebook.pdf)
 1. [UNIX: Running Tools](UNIX/01_Tools) [PDF](UNIX/01_Tools.pdf)
