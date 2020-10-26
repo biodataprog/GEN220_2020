@@ -68,5 +68,5 @@ Major Topic Areas
 
 ## Other skills and Tools
 1. [R basics](Misc/Rplotting) - Rstudio on HPCC [http://rstudio.hpcc.ucr.edu](http://rstudio.hpcc.ucr.edu/), [https://rstudio.cloud/](https://rstudio.cloud/) or install [Rstudio](https://rstudio.com/products/rstudio/download/#download) on your own computer.
-   - Also see [https://datacarpentry.org/R-genomics/05-data-visualization.html](https://datacarpentry.org/R-genomics/05-data-visualization.html)
+   - Also see [Data Carpentry DataViz](https://datacarpentry.org/R-genomics/05-data-visualization.html]
 1. [Building Websites](Misc/Building_Websites) using github.io [PDF](Misc/Building_Websites.pdf)
