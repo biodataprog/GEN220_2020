@@ -8,7 +8,7 @@ Practice printing out data
 
 Let's count up Exon number and length.
 
-Use `/bigdata/gen220/shared/simple/rice_random_exons.bed`
+Use [rice_random_exons.bed](https://raw.githubusercontent.com/biodataprog/GEN220/master/data/rice_random_exons.bed)
 
 Write python code to do the following:
 
@@ -22,7 +22,7 @@ site:
 [https://datacarpentry.org/2015-03-09-ISI-CODATA/data/biology/species.csv](https://datacarpentry.org/2015-03-09-ISI-CODATA/data/biology/species.csv)
 for this example.
 
-Print out the names of all the genera (genus column) and the counts of each. 
+Print out the names of all the genera (genus column) and the counts of each.
 
 ## FASTA file processing
 
@@ -51,7 +51,9 @@ def aspairs(f):
             sequence = ''.join(line.strip() for line in group)
             yield seq_id, sequence
 
-filename="/bigdata/gen220/shared/data_files/S_cerevisiae_ORFs.fasta"
+# you could use this or you can download this from here instead
+# https://github.com/biodataprog/GEN220_data/raw/main/data/S_cerevisiae_ORFs.fasta
+filename="/bigdata/gen220/shared/data/S_cerevisiae_ORFs.fasta"
 #filename="S_cerevisiae_ORFs.fasta"
 with open(filename,"r") as f:
    seqs = dict(aspairs(f))
@@ -62,7 +64,7 @@ with open(filename,"r") as f:
 
    for seqname in seqs:
        sequence_count += 1
-       
+
        firstcodon = seqs[seqname][0:3]
        lastcodon = seqs[seqname][-3:]
        if firstcodon in first_codon:
@@ -92,7 +94,7 @@ for codon in first_codon:
     print("%s => %d (%.1f%%)" % (codon, first_codon[codon],
                                  100.0 * first_codon[codon] / sequence_count))
 
-    
+
 print("The distribution of last codons is:")
 for codon in last_codon:
     print("%s => %d (%.1f%%)" % (codon, last_codon[codon],
@@ -106,5 +108,3 @@ print("There are %s genes on the Watson (+) strand"%(strand_count['W']))
 print("          %s genes on the Crick  (-) strand"%(strand_count['C']))
 
 ```
-
-
