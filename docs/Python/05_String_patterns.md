@@ -66,7 +66,7 @@ There are several components to the match.
 * Special characters to match extra patterns
     * `\d` matches numeric (0-9)
     * `\D` matches NOT numeric not(0-9)
-    * `\s` matches white space 
+    * `\s` matches white space
     * `\S` matches NOT white space
     * `[A-Z]` - ranges, all letters A-Z
     * `.` - matches anything
@@ -101,7 +101,7 @@ re.search('A+B','B') # false
 
 re.search('A*B','AAAAAAB') # true
 re.search('A*B','AB') # true
-re.search('A*B','B') # true      
+re.search('A*B','B') # true
 ```
 
 ### Grouping patterns and Capture
@@ -143,7 +143,7 @@ m = re.search(pattern, string, start)
 while( m ):
      #  process this match
      start = m.end()+1
-     m = re.search(pattern,string,start)      
+     m = re.search(pattern,string,start)
 ```
 
 ### Speeding up
@@ -193,6 +193,64 @@ for RE in RestrictionEnzymes:
 ```
 
 
+## More Regular expressions
+
+Replacement options
+
+The `re.sub()` function allow replacement
+```
+re.sub(pattern, repl, string, count=0, flags=0)
+```
+
+To replace all instances of 'cat' with 'dog'
+
+```python
+#!/usr/bin/env python3
+import re
+message="The cat curled up on the couch for a catnap"
+newmsg = re.sub(r'cat',r'dog',message)
+print(message)
+print(newmsg)
+# only replace first instance
+newmsg = re.sub(r'cat',r'dog',message,1)
+print(newmsg)
+```
+
+Now with a pattern
+
+```python
+import itertools, sys, re, os
+Chr8="http://sgd-archive.yeastgenome.org/sequence/S288C_reference/chromosomes/fasta/chr08.fsa"
+
+PREsite=r'TGA[AT]AC'
+REPLACE='PREPRE'
+Chr8File="chr08.fsa"
+if not os.path.exists(Chr8File):
+    os.system("curl -O {}".format(Chr8))
+
+# define what a header looks like in FASTA format
+def isheader(line):
+    return line[0] == '>'
+
+def aspairs(f):
+    seq_id = ''
+    sequence = ''
+    for header,group in itertools.groupby(f, isheader):
+        if header:
+            line = next(group)
+            seq_id = line[1:].split()[0]
+        else:
+            sequence = ''.join(line.strip() for line in group)
+            yield seq_id, sequence
+
+with open(Chr8File,"rt") as fh:
+    seqs = aspairs(fh)
+    for seqinfo in seqs:
+        seqstr = seqinfo[1].lower()
+        newseq=re.sub(PREsite,REPLACE,seqstr,flags=re.IGNORECASE)
+        print(newseq)
+```
+
 ## Demonstrating matches from random DNA
 
 ```python
@@ -214,17 +272,15 @@ def rand_DNA (length):
 
     return rand_DNA
 
-    
-
 
 # lets initialize a pattern we want to match
 # let's use the PRE motif which is a binding site for
 # a transcription factor
 # based on this paper:
-# 
+#
 
-EcoRI   = "GAATTC" 
-Bsu15I  = "ATCGAT"  
+EcoRI   = "GAATTC"
+Bsu15I  = "ATCGAT"
 Bsu36I  = "CCT[ACGT]AGG"
 BsuRI   = "GGCC"
 EcoRII  = "CC[AT]GG"
