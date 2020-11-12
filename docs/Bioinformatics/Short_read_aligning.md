@@ -4,7 +4,7 @@
 
 ### Index genome
 
-It is necessary to index the genome in preparation of alignemnt.
+It is necessary to index the genome in preparation of alignement.
 
 ```
 #SBATCH -p short -N 1 -n 2 --mem 2gb
