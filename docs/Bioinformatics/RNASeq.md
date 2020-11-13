@@ -41,9 +41,9 @@ Challenges: mRNA is spliced, genome contains introns
 
 Splice-aware short read aligners. Speed and accuracy tradeoffs
 * Tophat + Bowtie -- this is old don't use
-* HISAT/HISAT2
-* GMAP/GSNAP
-* STAR
+* [HISAT2](https://daehwankimlab.github.io/hisat2/)
+* [GMAP/GSNAP](http://research-pub.gene.com/gmap/)
+* [STAR](https://github.com/alexdobin/STAR)
 
 # Need to Quantify expression
 
@@ -52,7 +52,8 @@ Splice-aware short read aligners. Speed and accuracy tradeoffs
 * Normalize counts for gene length and sequencing library depth
 * Gene expression then is FPKM - Fragments per Kilobase per Millions of reads
 * Tools: htseq-count, stringtie
-* BEDtools
+* [SubRead](http://subread.sourceforge.net/)
+* [BEDtools](https://bedtools.readthedocs.io/en/latest/)
 * R tools with iRanges
 
 
@@ -195,3 +196,22 @@ INFILE=SRR3396381.sort.bam
 featureCounts -g gene_id -T $CPUS -G $GENOME -s 0 -a $GFF -o $OUTFILE \
 -F GTF $INFILE
 ```
+
+# Template for Projects
+
+Here's a template for RNASeq analyses
+
+[https://github.com/biodataprog/RNASeq_template](https://github.com/biodataprog/RNASeq_template)
+Click on 'Use this template' - you can create your own version of this.
+
+It will prompt you give it a name.
+
+Go to the command line to download.
+
+```git clone yourname/YourRNASeqAnalysis.git```
+
+Edit `samples.csv` to describe names of some experiments `SRR3396381`.
+
+Download data in `input` folder.
+
+Download or us download script to get genome files (need to put a genome FASTA file in the folder). If want to do kallisto will need a mRNA file of transcriptome.
