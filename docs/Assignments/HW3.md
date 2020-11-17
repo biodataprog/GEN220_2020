@@ -1,3 +1,20 @@
+#Read alignment
+
+Align genomic DNA reads from three different experiments to the genome.
+
+Use `samtools` and the subcommand `flagstat` (or other tools if you want) to get a count for the number of reads which map to the genome.
+
+Explore other options for samtools - such as try the option to [retrieve reads which are unmapped](https://www.biostars.org/p/56246/)
+`samtools view -f 4`
+
+Try using the `samtools fastq` option to dump out reads which are unmapped.
+
+#SNP calling
+
+Call SNPs from this same dataset to explore how variants are called to create a VCF file. Follow example from class.
+
+Generate a table of SNP locations using `bcftools view` to reformat.
+
 # RNAseq and comparisons
 
 Reanalyze data in this published paper [Baker et al 2014](https://onlinelibrary.wiley.com/doi/full/10.1111/mmi.12688)
@@ -12,7 +29,7 @@ There is a sra_info.tab file which lists the sample accessions and their metadat
 Compare gene expression between two sets of conditions.
  - pH5.7
  - pH7
- 
+
  And growth carbon source
  - Glycerol
  - Pyruvate
