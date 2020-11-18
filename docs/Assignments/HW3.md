@@ -32,7 +32,7 @@ Generate a table of SNP locations using `bcftools view` to reformat.
 # RNAseq and comparisons
 
 Reanalyze data in this published paper [Baker et al 2014](https://onlinelibrary.wiley.com/doi/full/10.1111/mmi.12688)
-"Slow growth of Mycobacterium tuberculosis at acidic pH is regulated by phoPR and host‐associated carbon sources"
+"Slow growth of Mycobacterium tuberculosis at acidic pH is regulated by phoPR and host associated carbon sources"
 
 Data are downloaded to `/bigdata/gen220/shared/data/M_tuberculosis`
 
@@ -69,3 +69,4 @@ perl -p -e 's/>(\S+).+(\[locus_tag=([^\]]+)\])/>$3 $1 $2/' GCF_000008585.1_ASM85
 
 I made the protein file of sequences using script from BioPerl.
 ```bp_translate_seq.pl M_tuberculosis.cds.fasta > M_tuberculosis.pep.fasta```
+
