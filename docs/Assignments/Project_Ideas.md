@@ -2,7 +2,7 @@
 
 Develop a pipeline to identify mutations a given collection of isolates, strains generated from a mutagenesis experiment.
 
-For a plant project:  e.g. some data from []"Next-generation forward genetic screens: using simulated data to improve the design of mapping-by-sequencing experiments in Arabidopsis"](https://academic.oup.com/nar/article/47/21/e140/5572568)
+For a plant project:  e.g. some data from ["Next-generation forward genetic screens: using simulated data to improve the design of mapping-by-sequencing experiments in Arabidopsis"](https://academic.oup.com/nar/article/47/21/e140/5572568)
 
 Or try a smaller genome example in bacteria. Do this for point mutations - can you identify the specific candidate changes based on analysis compared to a reference genome? Can you identify mutational biases - eg if the mutagen was UV vs EMS can you identify the mutational bias or pattern?
 
