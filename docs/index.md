@@ -66,8 +66,8 @@ The course will be divided into three topic areas.
 1. [Bioinformatics: RNASeq](Bioinformatics/RNASeq) [PDF](Bioinformatics/RNASeq.pdf)
 1. [Bioinformatics: Variation and SNPs](Bioinformatics/Variants) [PDF](Bioinformatics/Variants.pdf)
 1. [Bioinformatics: Data Ranges](Bioinformatics/Ranges_Features_overlap) [PDF](Bioinformatics/Ranges_Features_overlap.pdf)
+1. [Bioinformatics: Protein domains](Bioinformatics/Protein_domains) [PDF](Bioinformatics/Protein_domains.pdf)
 1. [Bioinformatics: Workshop - parsing data](Bioinformatics/Workshop_parsing) [PDF](Bioinformatics/Workshop_parsing.pdf)
-1. [Bioinformatics 7: Protein domains](Bioinformatics/Protein_domains) [PDF](Bioinformatics/Protein_domains.pdf)
 
 ## Other skills and Tools
 1. [R basics](Misc/Rplotting) - Rstudio on HPCC [http://rstudio.hpcc.ucr.edu](http://rstudio.hpcc.ucr.edu/), [https://rstudio.cloud/](https://rstudio.cloud/) or install [Rstudio](https://rstudio.com/products/rstudio/download/#download) on your own computer.
