@@ -83,10 +83,10 @@ VCF=Salmonella.vcf.gz
 VCFFILTER=Salmonella.filtered.vcf.gz
 bcftools mpileup -Ou -f $GENOME $m | bcftools call -vmO z -o $VCF
 tabix -p vcf $VCF
-bcftools stats -F $GENOME -s - $VCF $VCF.stats
+bcftools stats -F $GENOME -s - $VCF > $VCF.stats
 mkdir -p plots
 plot-vcfstats -p plots/ $VCF.stats
-bcftools filter -O z -o $FILTERED -s LOWQUAL -i'%QUAL>10' $VCF
+bcftools filter -O z -o $VCFFILTER -s LOWQUAL -i'%QUAL>10' $VCF
 ```
 
 ## Genome Browsers
