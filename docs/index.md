@@ -67,6 +67,8 @@ The course will be divided into three topic areas.
 1. [Bioinformatics: Variation and SNPs](Bioinformatics/Variants) [PDF](Bioinformatics/Variants.pdf)
 1. [Bioinformatics: Data Ranges](Bioinformatics/Ranges_Features_overlap) [PDF](Bioinformatics/Ranges_Features_overlap.pdf)
 1. [Bioinformatics: Protein domains](Bioinformatics/Protein_domains) [PDF](Bioinformatics/Protein_domains.pdf)
+1. [Bioinformatics: Orthology](Bioinformatics/Orthology) [PDF](Bioinformatics/Orthology.pdf)
+2. [Bioinformatics: Genome Browsers](Bioinformatics/Genome_Browsers) [PDF](Bioinformatics/Genome_Browsers.pdf)
 1. [Bioinformatics: Workshop - parsing data](Bioinformatics/Workshop_parsing) [PDF](Bioinformatics/Workshop_parsing.pdf)
 
 ## Other skills and Tools
