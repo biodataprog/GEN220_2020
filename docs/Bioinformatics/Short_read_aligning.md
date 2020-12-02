@@ -22,6 +22,8 @@ bwa index $GENOME
 module load bwa
 module load samtools
 CPU=16
+mkdir -p ~/bigdata/Short_read_aligning
+cd ~/bigdata/Short_read_aligning
 mkdir -p fastq
 ln -s /bigdata/gen220/shared/data/S_enterica/*.fastq.gz fastq
 ln -s /bigdata/gen220/shared/data/S_enterica/S_enterica_CT18.fasta
@@ -76,7 +78,7 @@ GENOME=S_enterica_CT18.fasta
 # but if we do *.bam it will catch the intermediate bam files that are in the folder
 for a in $(cat acc.txt)
 do
-m="$a.bam $m"
+  m="$a.bam $m"
 done
 
 VCF=Salmonella.vcf.gz
@@ -117,9 +119,11 @@ local data with public genome resources.
 * [EuPathDB](http://eupathdb.org/), [JGI Genomes](https://genome.jgi.doe.gov/portal/)
 * [IMG/M - JGI](https://img.jgi.doe.gov/)
 
-# Displaying data in ensembl
+# Displaying data in EnsEMBL
 
 Go to [Ensembl Site for Salmonella enterica subsp. enterica serovar Typhi str. CT18](https://bacteria.ensembl.org/Salmonella_enterica_subsp_enterica_serovar_typhi_str_ct18/Info/Index/)
+
+See [the EnsEMBL tutorial](https://ensembl.org/info/website/upload/index.html) on how to add a BAM file track (note this only works if you have aligned reads to the SAME ASSEMBLY that is in Ensembl).
 
 Click on "Display your data in Ensembl Bacteria"
 
@@ -127,7 +131,7 @@ Make a link on the web for your data. Follow directions on [HPCC site](https://h
 ```
 mkdir -p ~/.html/share
 cd ~/.html/share
-ln -s ~/YOURFOLDERFROM_ANALYSIS .
+ln -s ~/bigdata/Short_read_aligning . # or wherever you were doning
 ```
 
-Now you can use the URL `http://cluster.hpcc.ucr.edu/~YOURLOGIN/share/`
+Now you can use the URL `http://cluster.hpcc.ucr.edu/~YOURLOGIN/share/Short_read_aligning` and the `.bam` files that are in there.

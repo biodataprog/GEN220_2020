@@ -1,4 +1,4 @@
-# 
+#
 
 #Orthologs and Paralogs
 
@@ -69,9 +69,10 @@ _Will write this in Python in Class_
 ## Steps to build orthologs on cluster
 
 Make sure genome protein FASTA file is
-```
+```text
 >SPECIESPREFIX|GENENAME
-```     
+
+```
 
 See [https://github.com/biodataprog/GEN220_2019_examples/tree/master/Bioinformatics_1](https://github.com/biodataprog/GEN220_2019_examples/tree/master/Bioinformatics_1) for example script for running orthofinder.
 
@@ -106,10 +107,12 @@ Opening the file cyanobacteria/Results_Nov08/Orthogroups.txt
 
 ## Format
 
-```GroupName\tSp1_Gene1, Sp1_Gene2\tSp2_Gene1, Sp2_Gene2\tSp3_Gene1, Sp3_Gene2```
-
-
+```text
+GroupName\tSp1_Gene1, Sp1_Gene2\tSp2_Gene1, Sp2_Gene2\tSp3_Gene1, Sp3_Gene2
 ```
+
+
+```text
 	Cyanobacterium_aponinum_pcc_10605.ASM31767v1	Nostoc_punctiforme_pcc_73102.ASM2002v1	Oscillatoriales_cyanobacterium_jsc_12.ASM30994v1
 OG0000000			EKQ66605, EKQ66611, EKQ66662, EKQ66782, EKQ66954, EKQ66984, EKQ67084, EKQ67085, EKQ67278, EKQ67284, EKQ67330, EKQ67344, EKQ67361, EKQ67366, EKQ67368, EKQ67427,
  EKQ67433, EKQ67590, EKQ67680, EKQ67799, EKQ67807, EKQ67983, EKQ68026, EKQ68032, EKQ68054, EKQ68173, EKQ68296, EKQ68354, EKQ68495, EKQ68500, EKQ68912, EKQ69012, EKQ69027, EKQ69073, EKQ69085,
@@ -134,9 +137,8 @@ OG0000007	AFZ53704, AFZ54461, AFZ54462	ACC79786, ACC80242, ACC80282, ACC80538, A
 
 # Write script to turn this into a table
 
-```
+```text
 ORTHOLOG_GRP	SP1   SP2    SP3
 ORTHO_0001         10     5
 ORTHO_0002          1     1
 ```
-
