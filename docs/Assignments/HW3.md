@@ -50,7 +50,18 @@ Compare gene expression between two sets of conditions.
 
 1. Run Kallisto to get the gene expression calculated from each sample - you will need the file `M_tuberculosis.cds.fasta` as the database and each of the 8 `.fastq.gz` files in the folder. You can make links to these files (`ln -s /bigdata/gen220/shared/data/M_tuberculosis/*.fastq.gz`. You do not need to uncompress the files, Kallisto can read gzip compressed files.
 
+The goals here to run the results from this with [DESeq2](http://bioconductor.org/packages/release/bioc/html/DESeq2.html). You may need to install DEseq2 - you can do this by starting up an R terminal (eg on cmdline do `R`)
+```
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
 
+BiocManager::install("DESeq2")
+```
+
+If you have run kallisto - here is already written script that will generate a figure for you. 
+```
+Rscript kallisto_DESeq.R
+```
 
 ## extra credit / extra
 
@@ -69,4 +80,3 @@ perl -p -e 's/>(\S+).+(\[locus_tag=([^\]]+)\])/>$3 $1 $2/' GCF_000008585.1_ASM85
 
 I made the protein file of sequences using script from BioPerl.
 ```bp_translate_seq.pl M_tuberculosis.cds.fasta > M_tuberculosis.pep.fasta```
-
