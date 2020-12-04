@@ -53,10 +53,73 @@ srun -p short -N 1 -n 4 --mem 16gb --pty bash -l
 mkdir -p ~/bigdata/jbrowse2
 cd ~/.html/private
 ln -s ~/bigdata/jbrowse2 .
-cd ~/.html/private
+cd ~/.html/private/jbrowse2
 
 module load jbrowse/2
 jbrowse create SARS-CoV-2
 ```
 
 If you are going to support multiple JBrowse environments you only need to have a custom data folder. So you can symlink to all the files within the jbrowse checkout and then make a separate data folder too. Otherwise you need to make sure you have a separate custom jbrowse checkout for each project you are supporting.
+
+To download the SARS genome and annotation from NCBI - this can be either in the folder you want to put the data or you can later symlink or copy from this folder
+```
+curl -o NC_045512.fna.gz https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/858/895/GCF_009858895.2_ASM985889v3/GCF_009858895.2_ASM985889v3_genomic.fna.gz
+curl -o NC_045512.gff.gz https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/009/858/895/GCF_009858895.2_ASM985889v3/GCF_009858895.2_ASM985889v3_genomic.gff.gz
+gunzip  NC_045512.fna.gz
+module load samtools
+samtools faidx  NC_045512.fna
+# to load GFF we need to ensure it is sorted
+module load bcftools
+zgrep "^#" NC_045512.gff.gz > header
+zgrep -v "^#" NC_045512.gff.gz  | sort -k1,1 -k4,4n >  NC_045512.sorted.gff
+bgzip -i NC_045512.sorted.gff
+tabix NC_045512.sorted.gff.gz
+```
+
+To load genome you have already put in the `SARS-CoV-2` folder - you need to *GO INTO THE* `SARS-CoV-2` folder
+```
+cd SARS-CoV-2
+# if downloaded the data into the folder
+jbrowse add-assembly NC_045512.fna --load inPlace
+# if you had a different folder for this
+jbrowse add-assembly ../path/to/NC_045512.fna --load symlink
+
+# if you forgot to create the index it will give you a message
+# then you need to do
+# samtools faidx NC_045512.fna
+# if you created the gff and ran bgzip and tabix in this folder
+jbrowse add-track  NC_045512.sorted.gff.gz --load inPlace
+# if you had put this in another folder
+#jbrowse add-track ../path/to/NC_045512.sorted.gff.gz --load symlink
+```
+
+To load VCF files (SNPs and variants)
+```
+jbrowse add-track ../path/to/SARS-CoV-2.vcf.gz --load symlink
+# if there are warnings you need to build an index you can srun
+# module load bcftools
+# tabix ../path/to/SARS-CoV-2.vcf.gz
+# then re-run the add-track
+# if VCF file is in this directory
+# jbrowse add-track SARS-CoV-2.vcf.gz --load inPlace
+```
+
+To load BAM files, WIG files, or other gFF you can use same add-track.
+For BAM, CRAM, files they need to have been indexed
+```
+module load samtools
+samtools index SRR11140748.bam
+```
+
+To add this file you can do
+```
+jbrowse add-track ../path/to/SRR11140748.bam --load symlink
+# or if the file was made IN this directory
+jbrowse add-track SRR11140748.bam --load inPlace
+# if it gives you a warning about index file run
+# samtools index BAMFILE
+```
+
+Now navigate to the web with you link based on your username and folder - this would look like this but you need to put your username  `http://cluster.hpcc.ucr.edu/~USERNAME/private/jbrowse2/SARS-CoV-2`
+
+To see my example go to [http://cluster.hpcc.ucr.edu/~jstajich/private/jbrowse2/SARS-CoV-2/](http://cluster.hpcc.ucr.edu/~jstajich/private/jbrowse2/SARS-CoV-2/)
