@@ -55,24 +55,16 @@ _Will write this in Python in Class_
 
 ## Issues
 
-![orthologsloss](http://compbio.mit.edu/modencode/orthologs/images/orthologs.png "Orthologs and Loss")
+![orthologsloss](images/orthologs.png "Orthologs and Loss")
 
 
-## Existing solution
+# Tools to go after Orthologous and Paralogous equences
 
-* OrthoMCL - requires SQL Database
-* Orthagogue - nearly identical results but runs w/o DB
-
+* [OrthoFinder](https://davidemms.github.io/)
 
 ## Steps to build orthologs on cluster
 
-Make sure genome protein FASTA file is
-```text
->SPECIESPREFIX|GENENAME
-
-```
-
-See [https://github.com/biodataprog/GEN220_2019_examples/tree/master/Bioinformatics_1](https://github.com/biodataprog/GEN220_2019_examples/tree/master/Bioinformatics_1) for example script for running orthofinder.
+We will take 3 datasets of annotated Cyanobacteria, download and run analysis to generate Ortholog table.
 
 ```bash
 #!/usr/bin/bash
@@ -88,12 +80,13 @@ curl -L -O ftp://ftp.ensemblgenomes.org/pub/bacteria/release-45/fasta/bacteria_1
 curl -L -O ftp://ftp.ensemblgenomes.org/pub/bacteria/release-45/fasta/bacteria_0_collection/nostoc_punctiforme_pcc_73102/pep/Nostoc_punctiforme_pcc_73102.ASM2002v1.pep.all.fa.gz
 curl -L -O ftp://ftp.ensemblgenomes.org/pub/bacteria/release-45/fasta/bacteria_4_collection/cyanobacterium_aponinum_pcc_10605/pep/Cyanobacterium_aponinum_pcc_10605.ASM31767v1.pep.all.fa.gz
 
+# uncompress files and name them all *.fasta
 for file in *.fa.gz
 do
  m=$(basename $file .pep.all.fa.gz)
  pigz -dc $file > $m.fasta
 done
-pigz -k *.fa.gz
+
 cd ..
 
 orthofinder.py -a $CPU -f cyanobacteria
@@ -101,7 +94,7 @@ orthofinder.py -a $CPU -f cyanobacteria
 
 # Ortholog results
 
-Opening the file cyanobacteria/Results_Nov08/Orthogroups.txt
+The output file by default will be the date of the anlaysis. Opening the file `cyanobacteria/Results_XXX/Orthogroups.txt` but I made a [folder](https://github.com/biodataprog/GEN220_2020_examples/blob/main/Orthologs/cyanobacteria/OrthoFinder/Results/Orthogroups/) in the examples you look over. Here's one [table](https://github.com/biodataprog/GEN220_2020_examples/blob/main/Orthologs/cyanobacteria/OrthoFinder/Results/Orthogroups/Orthogroups.tsv)
 
 ## Format
 
@@ -133,7 +126,9 @@ OG0000007	AFZ53704, AFZ54461, AFZ54462	ACC79786, ACC80242, ACC80282, ACC80538, A
 2, EKQ68369, EKQ70142, EKQ70145, EKQ71300
 ```
 
-# Write script to turn this into a table
+The tool also generates [summary statistics](https://github.com/biodataprog/GEN220_2020_examples/tree/main/Orthologs/cyanobacteria/OrthoFinder/Results/Comparative_Genomics_Statistics) we can look through.
+
+Could write a script to turn this into a table or use the [summary count table](https://github.com/biodataprog/GEN220_2020_examples/blob/main/Orthologs/cyanobacteria/OrthoFinder/Results/Orthogroups/Orthogroups.GeneCount.tsv) provided.
 
 ```text
 ORTHOLOG_GRP	SP1   SP2    SP3
