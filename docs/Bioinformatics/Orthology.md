@@ -1,6 +1,4 @@
-#
-
-#Orthologs and Paralogs
+# Finding Orthologs and Paralogs
 
 ![Orthologs](images/orthologs.gif)
 
@@ -10,14 +8,14 @@ Problem: How to find "same" genes across multiple species.
 
 Genes can duplicate (Paralogs) and can be identical due to descent (Ortholog)
 
-.center[![orthologs](http://genomeprojectsolutions.com/Images/Ortho-Paralog_tree.jpg "ortholog tree")]
+![orthologs](img/Ortho-Paralog_tree.jpg "ortholog tree")
 
 ## Methods
 
 * BLAST: 1 way BLAST (Gene A in Species X, what is best hit in Species Y)
 * BLAST: reciprocal BLAST
 
-.center[![diagramorth](img/PMC3024942_1471-2105-12-11-3.png "Orth")]
+![diagramorth](img/PMC3024942_1471-2105-12-11-3.png "Orth")
 
 
 ## Trees can help resolve relationships
@@ -57,7 +55,7 @@ _Will write this in Python in Class_
 
 ## Issues
 
-.center[![orthologsloss](http://compbio.mit.edu/modencode/orthologs/images/orthologs.png "Orthologs and Loss")]
+![orthologsloss](http://compbio.mit.edu/modencode/orthologs/images/orthologs.png "Orthologs and Loss")
 
 
 ## Existing solution
