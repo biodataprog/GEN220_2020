@@ -40,7 +40,9 @@ Major Topic Areas
 # Project
 
 * [Project Team Ideas](Assignments/Project_Ideas)
-* * [Project Team Report Template](Assignments/Project_Report_Template) [PDF](Assignments/Project_Report_Template.pdf)
+* [Project Team Report Template](Assignments/Project_Report_Template) [PDF](Assignments/Project_Report_Template.pdf)
+
+
 # Lectures
 
 The course will be divided into three topic areas.
