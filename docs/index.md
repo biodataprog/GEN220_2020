@@ -42,6 +42,7 @@ Major Topic Areas
 * [Project Team Ideas](Assignments/Project_Ideas)
 * [Project Team Report Template](Assignments/Project_Report_Template) [PDF](Assignments/Project_Report_Template.pdf)
 
+* The 2019 project ideas are [here](Assignments/Project_Teams.2019) [PDF](Assignments/Project_Teams.2019.pdf)
 
 # Lectures
 
