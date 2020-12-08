@@ -58,7 +58,7 @@ if (!requireNamespace("BiocManager", quietly = TRUE))
 BiocManager::install("DESeq2")
 ```
 
-If you have run kallisto - here is already written script that will generate a figure for you. 
+If you have run kallisto - here is already written script that will generate a figure for you.
 ```
 Rscript kallisto_DESeq.R
 ```
