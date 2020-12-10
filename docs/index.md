@@ -39,9 +39,9 @@ Major Topic Areas
 
 # Project
 
-* [Project Team Ideas](Assignments/Project_Ideas)
+* [Project Team Ideas](Assignments/Project_Ideas) [PDF/Assignments/Project_Ideas.pdf]
 * [Project Team Report Template](Assignments/Project_Report_Template) [PDF](Assignments/Project_Report_Template.pdf)
-
+* [Project Presentation Info](Assignments/Project_Presentation) [PDF](Assignemnts/Project_Presentation.pdf)
 * The 2019 project ideas are [here](Assignments/Project_Teams.2019) [PDF](Assignments/Project_Teams.2019.pdf)
 
 # Lectures
@@ -72,6 +72,7 @@ The course will be divided into three topic areas.
 1. [Bioinformatics: Orthology](Bioinformatics/Orthology) [PDF](Bioinformatics/Orthology.pdf)
 2. [Bioinformatics: Genome Browsers](Bioinformatics/Genome_Browsers) [PDF](Bioinformatics/Genome_Browsers.pdf)
 1. [Bioinformatics: Workshop - parsing data](Bioinformatics/Workshop_parsing) [PDF](Bioinformatics/Workshop_parsing.pdf)
+1. [Odds and Ends](Bioinformatics/Odds_and_Ends) [PDF](Bioinformatics/Odds_and_Ends.pdf)
 
 ## Other skills and Tools
 1. [R basics](Misc/Rplotting) - Rstudio on HPCC [http://rstudio.hpcc.ucr.edu](http://rstudio.hpcc.ucr.edu/), [https://rstudio.cloud/](https://rstudio.cloud/) or install [Rstudio](https://rstudio.com/products/rstudio/download/#download) on your own computer.
