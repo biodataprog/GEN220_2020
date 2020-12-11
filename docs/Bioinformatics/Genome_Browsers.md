@@ -120,6 +120,23 @@ jbrowse add-track SRR11140748.bam --load inPlace
 # samtools index BAMFILE
 ```
 
+Note that on the UCR HPCC to serve up BAM files properly you need to create a `.htaccess` file in the jbrowse folder (remember ours is called `SARS-CoV-2` in this example).
+Contents should be
+```
+# This Apache .htaccess file is for
+# allowing cross-origin requests as defined by the Cross-Origin
+# Resource Sharing working draft from the W3C
+# (http://www.w3.org/TR/cors/).  In order for Apache to pay attention
+# to this, it must have mod_headers enabled, and its AllowOverride
+# configuration directive must allow FileInfo overrides.
+<IfModule mod_headers.c>
+    AddType application/octet-stream .bam .bami .bai
+    Header onsuccess set Access-Control-Allow-Origin *
+    Header onsuccess set Access-Control-Allow-Headers X-Requested-With,Range
+    Header onsuccess set Access-Control-Expose-Headers Content-Length,Content-Range
+</IfModule>
+```
+
 Now navigate to the web with you link based on your username and folder - this would look like this but you need to put your username  `http://cluster.hpcc.ucr.edu/~USERNAME/private/jbrowse2/SARS-CoV-2`
 
 To see my example go to [http://cluster.hpcc.ucr.edu/~jstajich/private/jbrowse2/SARS-CoV-2/](http://cluster.hpcc.ucr.edu/~jstajich/private/jbrowse2/SARS-CoV-2/)
